@@ -2,22 +2,22 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import {
   ArrowRight,
+  Award,
   BarChart3,
   BookOpenCheck,
   CalendarDays,
+  Facebook,
+  Flame,
+  Instagram,
   ShieldCheck,
   Sparkles,
   Target,
   Timer,
   TrendingUp,
-  Award,
-  Zap,
-  Users,
-  Flame,
-  Instagram,
-  Facebook,
-  Youtube,
   Twitter,
+  Users,
+  Youtube,
+  Zap,
 } from "lucide-react";
 
 import {
@@ -147,7 +147,6 @@ function Home() {
 
           <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
             <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
-              {/* Hero Content */}
               <div>
                 <Badge className="animate-fade-in border-0 bg-primary-foreground/15 text-primary-foreground backdrop-blur">
                   Upcoming Indian exams · 2026–27 cycle
@@ -354,11 +353,12 @@ function Home() {
       </main>
 
       {/* =========================
-          FOOTER
+          SINGLE FOOTER
       ========================== */}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3">
@@ -378,7 +378,9 @@ function Home() {
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-semibold">Quick Links</h3>
+              <h3 className="font-semibold">
+                Quick Links
+              </h3>
 
               <div className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
                 <a
@@ -406,7 +408,9 @@ function Home() {
 
             {/* Social */}
             <div>
-              <h3 className="font-semibold">Follow Us</h3>
+              <h3 className="font-semibold">
+                Follow Us
+              </h3>
 
               <div className="mt-4 flex items-center gap-3">
                 <a
@@ -445,7 +449,9 @@ function Home() {
 
             {/* Exams */}
             <div>
-              <h3 className="font-semibold">Exams</h3>
+              <h3 className="font-semibold">
+                Exams
+              </h3>
 
               <div className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
                 <span>UPSC CSE</span>
@@ -456,11 +462,11 @@ function Home() {
             </div>
           </div>
 
-          {/* Bottom Copyright */}
+          {/* Copyright */}
           <div className="mt-10 border-t border-border pt-6">
             <p className="text-sm leading-6 text-muted-foreground">
-              Mock tests for Indian competitive exams. Always verify official
-              dates on the conducting body&apos;s website.
+              Mock tests for Indian competitive exams. Always verify
+              official dates on the conducting body&apos;s website.
             </p>
 
             <p className="mt-2 text-sm text-muted-foreground">
