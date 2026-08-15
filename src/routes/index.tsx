@@ -6,17 +6,13 @@ import {
   BarChart3,
   BookOpenCheck,
   CalendarDays,
-  Facebook,
   Flame,
-  Instagram,
   ShieldCheck,
   Sparkles,
   Target,
   Timer,
   TrendingUp,
-  Twitter,
   Users,
-  Youtube,
   Zap,
 } from "lucide-react";
 
@@ -147,6 +143,7 @@ function Home() {
 
           <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
             <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
+              {/* Hero Content */}
               <div>
                 <Badge className="animate-fade-in border-0 bg-primary-foreground/15 text-primary-foreground backdrop-blur">
                   Upcoming Indian exams · 2026–27 cycle
@@ -351,130 +348,6 @@ function Home() {
           </div>
         </section>
       </main>
-
-      {/* =========================
-          SINGLE FOOTER
-      ========================== */}
-      <footer className="border-t border-border bg-card">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-
-            {/* Brand */}
-            <div>
-              <div className="flex items-center gap-3">
-                <div className="flex size-11 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
-                  M
-                </div>
-
-                <span className="text-xl font-bold">
-                  MockWala
-                </span>
-              </div>
-
-              <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">
-                Bina Mock ke sab adhura, MockWala karega sapna poora.
-              </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="font-semibold">
-                Quick Links
-              </h3>
-
-              <div className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
-                <a
-                  href="#exams"
-                  className="transition-colors hover:text-foreground"
-                >
-                  Browse Exams
-                </a>
-
-                <Link
-                  to="/auth"
-                  className="transition-colors hover:text-foreground"
-                >
-                  Sign Up
-                </Link>
-
-                <Link
-                  to="/dashboard"
-                  className="transition-colors hover:text-foreground"
-                >
-                  Dashboard
-                </Link>
-              </div>
-            </div>
-
-            {/* Social */}
-            <div>
-              <h3 className="font-semibold">
-                Follow Us
-              </h3>
-
-              <div className="mt-4 flex items-center gap-3">
-                <a
-                  href="#"
-                  aria-label="Instagram"
-                  className="flex size-10 items-center justify-center rounded-full border border-border transition-all hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Instagram className="size-4" />
-                </a>
-
-                <a
-                  href="#"
-                  aria-label="Facebook"
-                  className="flex size-10 items-center justify-center rounded-full border border-border transition-all hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Facebook className="size-4" />
-                </a>
-
-                <a
-                  href="#"
-                  aria-label="YouTube"
-                  className="flex size-10 items-center justify-center rounded-full border border-border transition-all hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Youtube className="size-4" />
-                </a>
-
-                <a
-                  href="#"
-                  aria-label="X / Twitter"
-                  className="flex size-10 items-center justify-center rounded-full border border-border transition-all hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Twitter className="size-4" />
-                </a>
-              </div>
-            </div>
-
-            {/* Exams */}
-            <div>
-              <h3 className="font-semibold">
-                Exams
-              </h3>
-
-              <div className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">
-                <span>UPSC CSE</span>
-                <span>Banking Exams</span>
-                <span>SSC Exams</span>
-                <span>Railway Exams</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="mt-10 border-t border-border pt-6">
-            <p className="text-sm leading-6 text-muted-foreground">
-              Mock tests for Indian competitive exams. Always verify
-              official dates on the conducting body&apos;s website.
-            </p>
-
-            <p className="mt-2 text-sm text-muted-foreground">
-              © {new Date().getFullYear()} MockWala. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
