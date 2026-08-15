@@ -13,6 +13,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SessionProvider } from "@/components/session-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { SiteHeader } from "@/components/site-header";
+import { Instagram, Facebook, Youtube, Twitter } from "lucide-react"; // 🆕 Icons Imported Here
 
 function NotFoundComponent() {
   return (
@@ -122,8 +124,96 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SessionProvider>
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
+        <div className="flex min-h-screen flex-col bg-background">
+          {/* Header standard layout */}
+          <SiteHeader />
+          
+          {/* Main Website Pages Layout */}
+          <main className="flex-1">
+            <Outlet />
+          </main>
+
+          {/* 🆕 Beautiful New Footer Added Down Here */}
+          <footer className="border-t border-border bg-muted/30">
+            <div className="mx-auto max-w-6xl px-4 py-12">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 items-start">
+                
+                {/* Brand Column */}
+                <div className="md:col-span-2 flex flex-col gap-3">
+                  <span className="font-display text-lg font-bold tracking-tight text-foreground">
+                    Mock<span className="text-primary">Wala</span>
+                  </span>
+                  <p className="text-sm font-medium text-muted-foreground leading-relaxed max-w-sm">
+                    Bina Mock ke sab adhura, MockWala Karega Sapna pure
+                  </p>
+                </div>
+
+                {/* Quick Links Column */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">
+                    Quick Links
+                  </h3>
+                  <nav className="flex flex-col gap-2">
+                    <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                      Browse Exams
+                    </Link>
+                    <Link to="/auth" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                      Sign Up
+                    </Link>
+                    <Link to="/dashboard" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                      Dashboard
+                    </Link>
+                  </nav>
+                </div>
+
+                {/* Social Circles Column with border line divider links */}
+                <div className="flex flex-col gap-3 md:border-x md:border-border/60 md:px-6 h-full justify-start">
+                  <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">
+                    Follow Us
+                  </h3>
+                  <div className="flex gap-3 items-center mt-1 flex-wrap">
+                    {/* Instagram Profile */}
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                      <Instagram className="size-[22px]" />
+                    </a>
+                    {/* Facebook Link */}
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                      <Facebook className="size-[22px]" />
+                    </a>
+                    {/* YouTube Channel */}
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                      <Youtube className="size-[22px]" />
+                    </a>
+                    {/* X (Twitter) Profile */}
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                      <Twitter className="size-[22px]" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Exams Static View Column */}
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">
+                    Exams
+                  </h3>
+                  <nav className="flex flex-col gap-2">
+                    <span className="text-sm text-muted-foreground cursor-default">UPSC CSE</span>
+                    <span className="text-sm text-muted-foreground cursor-default">Banking Exams</span>
+                    <span className="text-sm text-muted-foreground cursor-default">SSC Exams</span>
+                  </nav>
+                </div>
+
+              </div>
+
+              {/* Bottom Copyright Strip */}
+              <div className="mt-12 border-t border-border/60 pt-6 text-center md:text-left">
+                <p className="text-xs text-muted-foreground">
+                  Mock tests for Indian competitive exams. Always verify official dates on the conducting body's website. &copy; {new Date().getFullYear()} MockWala. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </footer>
+        </div>
         <Toaster position="top-center" richColors />
       </SessionProvider>
     </QueryClientProvider>
