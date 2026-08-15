@@ -13,8 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SessionProvider } from "@/components/session-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { SiteHeader } from "@/components/site-header";
-import { Instagram, Facebook, Youtube, Twitter } from "lucide-react"; // 🆕 Icons Imported
+import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 
 function NotFoundComponent() {
   return (
@@ -125,15 +124,13 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <SessionProvider>
         <div className="flex min-h-screen flex-col bg-background">
-          {/* Main Global Header */}
-          <SiteHeader />
           
-          {/* Main Page Content */}
+          {/* Main Page Content (Header is managed inside here automatically) */}
           <main className="flex-1">
             <Outlet />
           </main>
 
-          {/* 🆕 Single Fixed Footer with Black Circle Icons */}
+          {/* Single Fixed Footer with Black Circle Icons */}
           <footer className="border-t border-border bg-muted/30">
             <div className="mx-auto max-w-6xl px-4 py-12">
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 items-start">
@@ -166,7 +163,7 @@ function RootComponent() {
                   </nav>
                 </div>
 
-                {/* Social Circles Column with border dividers */}
+                {/* Social Circles Column with line borders */}
                 <div className="flex flex-col gap-3 md:border-x md:border-border/60 md:px-6 h-full justify-start">
                   <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">
                     Follow Us
