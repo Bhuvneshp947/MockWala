@@ -31,9 +31,9 @@ function Dashboard() {
   });
 
   return (
-    <div className="min-h-screen">
+    <>
       <SiteHeader />
-      <main className="mx-auto max-w-5xl px-4 py-12">
+      <div className="mx-auto max-w-5xl px-4 py-12">
         {isPending ? (
           <div className="flex items-center gap-2 text-muted-foreground">
             <Loader2 className="size-4 animate-spin" /> Loading your dashboard…
@@ -116,8 +116,8 @@ function Dashboard() {
             )}
           </>
         )}
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
 

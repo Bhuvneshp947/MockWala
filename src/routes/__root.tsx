@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SessionProvider } from "@/components/session-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import { Instagram, Facebook, Youtube, X } from "lucide-react";
 
 function NotFoundComponent() {
   return (
@@ -137,7 +137,7 @@ function RootComponent() {
                 
                 {/* Brand Column */}
                 <div className="md:col-span-2 flex flex-col gap-3">
-                  <span className="font-display text-lg font-bold tracking-tight text-foreground">
+                  <span className="font-display text-3xl font-black tracking-tight text-foreground">
                     Mock<span className="text-primary">Wala</span>
                   </span>
                   <p className="text-sm font-medium text-muted-foreground leading-relaxed max-w-sm">
@@ -170,7 +170,7 @@ function RootComponent() {
                   </h3>
                   <div className="flex gap-3 items-center mt-1 flex-wrap">
                     {/* Instagram */}
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                    <a href="https://www.instagram.com/car.loverz63/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
                       <Instagram className="size-[22px]" />
                     </a>
                     {/* Facebook */}
@@ -178,12 +178,12 @@ function RootComponent() {
                       <Facebook className="size-[22px]" />
                     </a>
                     {/* YouTube */}
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                    <a href="https://youtube.com/@CAR_LOVERZ9" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
                       <Youtube className="size-[22px]" />
                     </a>
                     {/* X (Twitter) */}
-                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
-                      <Twitter className="size-[22px]" />
+                    <a href="https://x.com/Bhuvneshz" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center size-10 rounded-full bg-black text-white hover:bg-zinc-800 transition-colors shadow-sm">
+                      <X className="size-[22px]" />
                     </a>
                   </div>
                 </div>
@@ -202,12 +202,10 @@ function RootComponent() {
 
               </div>
 
-              {/* Bottom Strip */}
-              <div className="mt-12 border-t border-border/60 pt-6 text-center md:text-left">
-                <p className="text-xs text-muted-foreground">
-                  Mock tests for Indian competitive exams. Always verify official dates on the conducting body's website. &copy; {new Date().getFullYear()} MockWala. All rights reserved.
-                </p>
-              </div>
+              {/* Copyright */}
+              <p className="mt-8 pt-8 border-t border-border/60 text-center text-xs text-muted-foreground">
+                Mock tests for Indian competitive exams. Always verify official dates on the conducting body's website. &copy; {new Date().getFullYear()} MockWala. All rights reserved.
+              </p>
             </div>
           </footer>
         </div>

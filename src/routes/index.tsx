@@ -127,10 +127,10 @@ function Home() {
     );
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <>
       <SiteHeader />
 
-      <main className="flex-1">
+      <div className="flex-1">
         {/* =========================
             HERO SECTION
         ========================== */}
@@ -347,7 +347,7 @@ function Home() {
             })}
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }

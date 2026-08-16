@@ -43,7 +43,7 @@ export const Route = createFileRoute("/exam/$slug")({
 
 function Fallback({ title }: { title: string }) {
   return (
-    <div className="min-h-screen">
+    <>
       <SiteHeader />
       <div className="mx-auto max-w-2xl px-4 py-24 text-center">
         <h1 className="text-2xl font-bold">{title}</h1>
@@ -51,7 +51,7 @@ function Fallback({ title }: { title: string }) {
           <Link to="/">Back to all exams</Link>
         </Button>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -62,7 +62,7 @@ function ExamPage() {
   const exam = data.exam!;
 
   return (
-    <div className="min-h-screen">
+    <>
       <SiteHeader />
 
       <section className="bg-hero-gradient text-primary-foreground">
@@ -129,6 +129,6 @@ function ExamPage() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 }
